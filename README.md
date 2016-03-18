@@ -1,7 +1,7 @@
 # GDB Pretty-Printed Frames for C++
 
 Pretty-printer for GDB frames in a backtrace, able to handle nested C++ template arguments. Originally developed for
-use debugging [CGAL](http://www.cgal.org/), but is template-library agnostic.
+use debugging [CGAL](http://www.cgal.org/)-based projects, but is template-library agnostic.
 
 ![Pretty-printer in use with CGAL](https://raw.githubusercontent.com/philtweir/gdb-pretty-frame-cpp/master/doc/inuse.png)
 
