@@ -106,4 +106,4 @@ class PrettyFrame:
                     print(e)
                 nested = []
 
-        return self.format_nested(nested.asList())
+        return self.format_nested([] if nested == [] else nested.asList())
