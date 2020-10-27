@@ -27,7 +27,7 @@ class PrettyFrame:
     def __init__(self):
         self.enclosed = pyp.Forward()
         nestedAngles = pyp.nestedExpr('<', '>', content=self.enclosed)
-        self.enclosed << (pyp.Word('_' + pyp.alphanums) | '{' | '}' |
+        self.enclosed << (pyp.Word('_' + pyp.alphanums) | '{' | '}' | '#' |
                           '(' | ')' | '*' | '&' | ',' | pyp.Word("::") |
                           nestedAngles)
 
