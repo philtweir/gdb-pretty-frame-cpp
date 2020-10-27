@@ -1,7 +1,11 @@
 import gdb
-import itertools
 import cpp_pretty_frame
 import functools
+
+try:
+    from itertools import imap
+except ImportError:
+    imap=map
 
 
 class CppFrameDecorator(gdb.FrameDecorator.FrameDecorator):
@@ -29,7 +33,7 @@ class CppFrameFilter():
         gdb.frame_filters[self.name] = self
 
     def filter(self, frame_iter):
-        frame_iter = itertools.imap(
+        frame_iter = imap(
             functools.partial(CppFrameDecorator,
                               frame_printer=self.frame_printer),
             frame_iter)
